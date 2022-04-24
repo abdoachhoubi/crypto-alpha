@@ -1,0 +1,103 @@
+#Section__Coins
+    width: 100%
+    padding: 24px 36px
+    display: flex
+    flex-direction: column
+    h2
+        margin-top: 16px
+        font-weight: 500
+    .Coins__Cards
+        width: 90%
+        padding: 24px 0
+        align-self: center
+        .Coin__Data
+            &:not(:last-child)
+                margin-bottom: 48px
+        .Coin__Card
+            width: 100%
+            display: flex
+            align-items: flex-end
+            justify-content: space-between
+            .Coin__Card__Info
+                background-color: $Color__Gray
+                padding: 16px
+                border-radius: 8px
+                width: 50%
+                .CCI__Header
+                    width: 100%
+                    display: flex
+                    align-items: center
+                    .CCI__Icon
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        width: 50px
+                        height: 50px
+                        padding: 4px
+                        border-radius: 4px
+                        background-color: $Color__Light
+                        margin-right: 16px
+                        img
+                            width: 30px
+                            height: 30px
+                .CCI__Body
+                    width: 100%
+                    margin-top: 16px
+                    p
+                        line-height: 28px
+                .CCI__Footer
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+                    height: 40px
+                    margin-top: 36px
+                    button
+                        cursor: pointer
+                    .CCI__History
+                        padding: 12px 18px
+                        background-color: $Color__Light
+                        border: none
+                        border-radius: 6px
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        span
+                            margin-right: 8px
+                            color: $Color__Dark
+                            font-weight: 600
+                    .CCI__Social
+                        display: flex
+                        align-items: center
+                        .Card__Social__Icons
+                            color: $Color__Primary
+                            margin-left: 12px
+
+            .Coin__Card__Price
+                width: 46%
+                .CCP
+                    width: 100%
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    height: 60px
+                    padding: 0 12px
+                    border-radius: 8px
+                    background-color: $Color__Gray
+                    &:not(:last-child)
+                        margin-bottom: 16px
+                    p
+                        margin-right: 12px
+                        color: $Color__Light
+
+#Coin__Chart
+    width: 100%
+    padding: 16px
+    margin-top: 16px
+    background-color: $Color__Gray
+    border-radius: 8px
+    .Close__Chart
+        cursor: pointer
+        margin-bottom: 16px
+    .Chart__Canvas
+        max-height: 400px
+        width: auto
