@@ -1,13 +1,362 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap");
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  scroll-behavior: smooth;
 }
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #0F0F0F;
+}
+
+body * {
+  color: #FFFFFF;
+  font-family: "Sora", sans-serif;
+}
+
+@-webkit-keyframes udanima {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(0, 50px);
+            transform: translate(0, 50px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+}
+
+@keyframes udanima {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(0, 50px);
+            transform: translate(0, 50px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+}
+
+header {
+  width: 100%;
+  height: 80vh;
+  background-image: url("https://source.unsplash.com/dVcXOkpp3fk");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+header .container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: relative;
+}
+
+header .container .Header__Heading {
+  width: 80%;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+header .container .Header__SubHeading {
+  margin-top: 16px;
+  width: 60%;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+header .container .Header__Arrow {
+  cursor: pointer;
+  position: absolute;
+  bottom: 100px;
+  left: calc( 50% - 15px);
+  -webkit-animation-name: udanima;
+          animation-name: udanima;
+  -webkit-animation-duration: 1500ms;
+          animation-duration: 1500ms;
+  -webkit-animation-fill-mode: ease-in-out;
+          animation-fill-mode: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+main {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main nav {
+  width: 100%;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 24px 12px;
+  border-bottom: 2px solid #FFFFFF;
+  margin-bottom: 36px;
+}
+
+main nav ul {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main nav ul li {
+  display: inline-block;
+  list-style: none;
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+  cursor: pointer;
+  margin-bottom: 8px;
+  border-bottom: 2px solid transparent;
+}
+
+main nav ul li:hover {
+  color: #CF1A29;
+  border-bottom: 2px solid #CF1A29;
+}
+
+#Section__Coins {
+  width: 100%;
+  padding: 24px 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#Section__Coins h2 {
+  margin-top: 16px;
+  font-weight: 500;
+}
+
+#Section__Coins .Coins__Cards {
+  width: 90%;
+  padding: 24px 0;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#Section__Coins .Coins__Cards .Coin__Data:not(:last-child) {
+  margin-bottom: 48px;
+}
+
+#Section__Coins .Coins__Cards .Coin__Card {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#Section__Coins .Coins__Cards .Coin__Card .Coin__Card__Info {
+  background-color: #2A2A2A;
+  padding: 16px;
+  border-radius: 8px;
+  width: 50%;
+}
+
+#Section__Coins .Coins__Cards .Coin__Card .Coin__Card__Info .CCI__Header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#Section__Coins .Coins__Cards .Coin__Card .Coin__Card__Info .CCI__Header .CCI__Icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50px;
+  height: 50px;
+  padding: 4px;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  margin-right: 16px;
+}
+
+#Section__Coins .Coins__Cards .Coin__Card .Coin__Card__Info .CCI__Header .CCI__Icon img {
+  width: 30px;
+  height: 30px;
+}
+
+#Section__Coins .Coins__Cards .Coin__Card .Coin__Card__Info .CCI__Body {
+  width: 100%;
+  margin-top: 16px;
+}
+
+#Section__Coins .Coins__Cards .Coin__Card .Coin__Card__Info .CCI__Body p {
+  line-height: 28px;
+}
+
+#Section__Coins .Coins__Cards .Coin__Card .Coin__Card__Info .CCI__Footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 40px;
+  margin-top: 36px;
+}
+
+#Section__Coins .Coins__Cards .Coin__Card .Coin__Card__Info .CCI__Footer button {
+  cursor: pointer;
+}
+
+#Section__Coins .Coins__Cards .Coin__Card .Coin__Card__Info .CCI__Footer .CCI__History {
+  padding: 12px 18px;
+  background-color: #FFFFFF;
+  border: none;
+  border-radius: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#Section__Coins .Coins__Cards .Coin__Card .Coin__Card__Info .CCI__Footer .CCI__History span {
+  margin-right: 8px;
+  color: #0F0F0F;
+  font-weight: 600;
+}
+
+#Section__Coins .Coins__Cards .Coin__Card .Coin__Card__Info .CCI__Footer .CCI__Social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#Section__Coins .Coins__Cards .Coin__Card .Coin__Card__Info .CCI__Footer .CCI__Social .Card__Social__Icons {
+  color: #CF1A29;
+  margin-left: 12px;
+}
+
+#Section__Coins .Coins__Cards .Coin__Card .Coin__Card__Price {
+  width: 46%;
+}
+
+#Section__Coins .Coins__Cards .Coin__Card .Coin__Card__Price .CCP {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 60px;
+  padding: 0 12px;
+  border-radius: 8px;
+  background-color: #2A2A2A;
+}
+
+#Section__Coins .Coins__Cards .Coin__Card .Coin__Card__Price .CCP:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+#Section__Coins .Coins__Cards .Coin__Card .Coin__Card__Price .CCP p {
+  margin-right: 12px;
+  color: #FFFFFF;
+}
+
+#Coin__Chart {
+  width: 100%;
+  padding: 16px;
+  margin-top: 16px;
+  background-color: #2A2A2A;
+  border-radius: 8px;
+}
+
+#Coin__Chart .Close__Chart {
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+#Coin__Chart .Chart__Canvas {
+  max-height: 400px;
+  width: auto;
+}
+/*# sourceMappingURL=index.css.map */

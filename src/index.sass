@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
+    
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+$Color__Dark: #0F0F0F
+$Color__Light: #FFFFFF
+$Color__Primary: #CF1A29
+$Color__Gray: #2A2A2A
+
+$Sora: "Sora", sans-serif
+
+html
+    scroll-behavior: smooth
+
+body
+    width: 100%
+    overflow-x: hidden
+    background-color: $Color__Dark
+    *
+        color: $Color__Light
+        font-family: $Sora
+
+@mixin udAnimation()
+    animation-name: udanima
+    animation-duration: 1500ms
+    animation-fill-mode: ease-in-out
+    animation-iteration-count: infinite
+
+@keyframes udanima
+    0%
+        transform: translate(0,0)
+    50%
+        transform: translate(0,50px)
+    100%
+        transform: translate(0,0px)
+    
+
+@import "./components/_Header"
+@import "./components/_Main"
+@import "./components/Main/_Coins"
+@import "./components/_Footer"
