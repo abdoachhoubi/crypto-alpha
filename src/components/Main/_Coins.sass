@@ -1,13 +1,95 @@
+$Color__Error: rgb(255, 164, 164)
+$Color__Success: rgb(164, 255, 199)
+    
+@mixin pop($anime, $state)
+    position: fixed
+    z-index: 1000
+    top: 8px
+    left: 50%
+    background-color: $state
+    display: flex
+    align-items: center
+    justify-content: space-evenly
+    transform: translate(-50%, -100px)
+    opacity: 0
+    height: 60px
+    width: fit-content
+    padding: 0 36px
+    border-radius: 8px
+    opacity: 1
+    animation-name: $anime
+    animation-duration: 1600ms
+    animation-fill-mode: ease-in-out
+
+.Chipx
+    @include pop(popup, $Color__Error)
+    
+.Chipy
+    @include pop(popup, $Color__Error)
+
+
+.Chip
+    @include pop(popup, $Color__Success)
+    
+.popup
+    @include pop(popupx, $Color__Success)
+
+.popup__msg
+    color: $Color__Dark
+    font-size: 14px
+
+@keyframes popup
+    0%
+        transform: translate(-50%, -100px)
+        opacity: 0
+    25%
+        transform: translate(-50%, 0px)
+        opacity: 1
+    75%
+        transform: translate(-50%, 0px)
+        opacity: 1
+    100%
+        transform: translate(150%, 0px)
+        opacity: 0
+
+@keyframes popupx
+    0%
+        transform: translate(-50%, -100px)
+        opacity: 0
+    25%
+        transform: translate(-50%, 0px)
+        opacity: 1
+    75%
+        transform: translate(-50%, 0px)
+        opacity: 1
+    100%
+        transform: translate(150%, 0px)
+        opacity: 0
+
+
 #Section__Coins
-    width: 100%
+    width: 90%
     padding: 24px 36px
     display: flex
     flex-direction: column
-    h2
-        margin-top: 16px
-        font-weight: 500
+    .Coins__Ref
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 50%
+        margin-bottom: 24px
+        .Coins__Cards__Heading
+            font-size: 3rem
+        .Coins__Refresh
+            padding: 12px 26px
+            background-color: $Color__Light
+            color: $Color__Dark
+            font-weight: 600
+            cursor: pointer
+            border: none
+            border-radius: 6px
     .Coins__Cards
-        width: 90%
+        width: 100%
         padding: 24px 0
         align-self: center
         .Coin__Data
@@ -95,9 +177,52 @@
     margin-top: 16px
     background-color: $Color__Gray
     border-radius: 8px
+    nav
+        ul
+            width: 80%
     .Close__Chart
         cursor: pointer
         margin-bottom: 16px
     .Chart__Canvas
         max-height: 400px
-        width: auto
+        min-width: auto
+
+
+@media screen and ( max-width: 800px )
+    #Section__Coins
+        width: 100%
+        padding: 24px 12px
+        .Coins__Ref
+            width: 100%
+            .Coins__Cards__Heading
+                font-size: 2rem
+        .Coins__Cards
+            width: 100%
+            .Coin__Card
+                flex-direction: column
+                align-items: flex-start
+                .Coin__Card__Info
+                    width: 100%
+                    margin-bottom: 12px
+                    .CCI__Footer
+                        height: 60px
+                        .CCI__History
+                            padding: 22px 18px
+                        .CCI__Social
+                            .Card__Social__Icons
+                                margin-left: 16px
+
+                .Coin__Card__Price
+                    width: 100%
+    
+    #Coin__Chart
+        nav
+            height: fit-content
+            ul
+                width: 100%
+                flex-direction: column
+        .Uncharted
+            width: 100%
+            overflow-x: scroll
+        .Chart__Alpha
+            width: 2000px

@@ -5,7 +5,8 @@ import { X } from "react-feather";
 
 const History = (props) => {
   const canvas = useRef();
-  const [duration, setDuration] = useState("all");
+  const [duration, setDuration] = useState("1m");
+  const [dur, setDur] = useState("1 Month");
   const [chart, setChart] = useState(null);
 
   const getData = async (dura) => {
@@ -15,12 +16,12 @@ const History = (props) => {
       .then((response) => response.json())
       .then((data) => {
         const chartData = {
-          labels: data.chart.map((array) => data.chart.indexOf(array) + 1),
+          labels: data.chart.map((array) => data.chart.indexOf(array)),
           datasets: [
             {
               label: `${props.data.name}`,
               backgroundColor: "rgba(207, 26, 41, 1)",
-              borderColor: "rgb(255, 255, 255)",
+              borderColor: "rgba(207, 26, 41, 1)",
               data: data.chart.map((array) => array[1]),
             },
           ],
@@ -29,9 +30,7 @@ const History = (props) => {
         const config = {
           type: "line",
           data: chartData,
-          options: {
-            fill: true,
-          },
+          options: {},
         };
         // eslint-disable-next-line no-unused-vars
 
@@ -63,6 +62,7 @@ const History = (props) => {
           <li
             onClick={() => {
               switchHistory("24h");
+              setDur("24 Hours");
             }}
           >
             24 Hours
@@ -70,6 +70,7 @@ const History = (props) => {
           <li
             onClick={() => {
               switchHistory("1w");
+              setDur("1 Week");
             }}
           >
             1 Week
@@ -77,6 +78,7 @@ const History = (props) => {
           <li
             onClick={() => {
               switchHistory("1m");
+              setDur("1 Month");
             }}
           >
             1 Month
@@ -84,6 +86,7 @@ const History = (props) => {
           <li
             onClick={() => {
               switchHistory("3m");
+              setDur("3 Months");
             }}
           >
             3 Months
@@ -91,6 +94,7 @@ const History = (props) => {
           <li
             onClick={() => {
               switchHistory("6m");
+              setDur("6 Months");
             }}
           >
             6 Months
@@ -98,6 +102,7 @@ const History = (props) => {
           <li
             onClick={() => {
               switchHistory("1y");
+              setDur("1 Year");
             }}
           >
             1 Year
@@ -105,13 +110,19 @@ const History = (props) => {
           <li
             onClick={() => {
               switchHistory("all");
+              setDur("All Time");
             }}
           >
             All Time
           </li>
         </ul>
       </nav>
-      <canvas className="Chart__Canvas" ref={canvas}></canvas>
+      <h2>{dur}</h2>
+      <div className="Uncharted">
+        <div className="Chart__Alpha">
+          <canvas className="Chart__Canvas" ref={canvas}></canvas>
+        </div>
+      </div>
     </div>
   );
 };

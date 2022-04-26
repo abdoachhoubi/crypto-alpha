@@ -1,17 +1,15 @@
 import React, { useState } from "react";
 import Coins from "./Main/Coins";
+import Exchange from "./Main/Exchange";
 
 const Main = () => {
   const [page, setPage] = useState(<Coins />);
+
   const switchtocoins = () => {
     setPage(<Coins />);
   };
   const switchtoexchange = () => {
-    setPage(
-      <>
-        <h1>Echange</h1>
-      </>
-    );
+    setPage(<Exchange />);
   };
   const switchtonews = () => {
     setPage(

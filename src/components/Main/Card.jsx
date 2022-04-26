@@ -64,14 +64,14 @@ const Card = ({ data }) => {
             <p>
               Rank: {data.rank}
               <br />
-              Price: {data.price}
+              Price: ${data.price.toFixed(2)}
               <br />
-              Market Capitalization: {data.marketCap}
+              Market Capitalization: {data.marketCap.toFixed(2)}
               <br />
-              Total Supply: {data.totalSupply}
+              Total Supply: {data.totalSupply.toFixed(2)}
               <br />
-              Available Supply: {data.availableSupply}
-              <br />1 BTC = {data.priceBtc} {data.symbol}
+              Available Supply: {data.availableSupply.toFixed(2)}
+              <br />1 {data.symbol} = {data.priceBtc.toFixed(2)} BTC
             </p>
           </div>
           <div className="CCI__Footer">
@@ -86,13 +86,23 @@ const Card = ({ data }) => {
 
             <div className="CCI__Social">
               {data.twitterUrl && (
-                <a className="Card__Social__Icons" href={data.twitterUrl}>
+                <a
+                  className="Card__Social__Icons"
+                  href={data.twitterUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <Twitter color="currentColor" size={24} />
                 </a>
               )}
 
               {data.websiteUrl && (
-                <a className="Card__Social__Icons" href={data.websiteUrl}>
+                <a
+                  className="Card__Social__Icons"
+                  href={data.websiteUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <Globe color="currentColor" size={24} />
                 </a>
               )}

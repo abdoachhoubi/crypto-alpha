@@ -7,7 +7,7 @@ const Header = () => {
       <div className="container">
         <h1 className="Header__Heading">Crypto Alpha</h1>
         <p className="Header__SubHeading">
-          Get the latest unpdates about
+          Get the latest updates about
           <br />
           Bitcoin, Ethereum, Tether, Solana and more!
         </p>
