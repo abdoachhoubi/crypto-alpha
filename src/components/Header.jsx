@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header id="Header__Section">
       <div className="container">
-        <h1 className="Header__Heading">Crypto Alpha</h1>
+        <h1 className="Header__Heading">All the crypto updates in one place</h1>
         <p className="Header__SubHeading">
           Get the latest updates about
           <br />

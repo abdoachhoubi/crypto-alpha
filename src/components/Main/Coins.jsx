@@ -30,9 +30,12 @@ const Coins = () => {
     await fetch(
       "https://api.coinstats.app/public/v1/coins?skip=0&limit=12&currency=USD"
     )
+      .catch((e) => {
+        switchPop();
+        return {};
+      })
       .then((response) => {
         if (response.status !== 200) {
-          switchPop();
           return {};
         }
         return response.json();
@@ -41,9 +44,7 @@ const Coins = () => {
         setCoins(data.coins.map((coin) => <Card key={coin.id} data={coin} />));
         if (pop) switchPopup();
       })
-      .finally(() => {
-        console.log("Finally");
-      });
+      .finally(() => {});
   };
 
   useEffect(() => {

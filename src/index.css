@@ -58,7 +58,7 @@ body * {
 header {
   width: 100%;
   height: 80vh;
-  background-image: url("https://source.unsplash.com/dVcXOkpp3fk");
+  background-image: url("https://source.unsplash.com/DjjaZybYx4I");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -85,7 +85,6 @@ header .container {
 }
 
 header .container .Header__Heading {
-  width: 80%;
   text-align: center;
   font-size: 4rem;
   font-weight: 700;
@@ -120,7 +119,7 @@ header .container .Header__Arrow {
   }
   header .container .Header__Heading {
     width: 100%;
-    font-size: 2.4rem;
+    font-size: 2rem;
   }
   header .container .Header__SubHeading {
     width: 80%;
@@ -258,8 +257,8 @@ nav ul li:hover {
   padding: 0 36px;
   border-radius: 8px;
   opacity: 1;
-  -webkit-animation-name: popup;
-          animation-name: popup;
+  -webkit-animation-name: popupx;
+          animation-name: popupx;
   -webkit-animation-duration: 1600ms;
           animation-duration: 1600ms;
   -webkit-animation-fill-mode: ease-in-out;
@@ -501,7 +500,7 @@ nav ul li:hover {
   width: 50%;
 }
 
-#Section__Coins .Coins__Cards .Coin__Card .Coin__Card__Info .CCI__Header {
+#Section__Coins .Coins__Cards .Coin__Card .Coin__Card__Info .Title {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -511,7 +510,7 @@ nav ul li:hover {
           align-items: center;
 }
 
-#Section__Coins .Coins__Cards .Coin__Card .Coin__Card__Info .CCI__Header .CCI__Icon {
+#Section__Coins .Coins__Cards .Coin__Card .Coin__Card__Info .Title .CCI__Icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -529,7 +528,7 @@ nav ul li:hover {
   margin-right: 16px;
 }
 
-#Section__Coins .Coins__Cards .Coin__Card .Coin__Card__Info .CCI__Header .CCI__Icon img {
+#Section__Coins .Coins__Cards .Coin__Card .Coin__Card__Info .Title .CCI__Icon img {
   width: 30px;
   height: 30px;
 }
@@ -709,9 +708,10 @@ nav ul li:hover {
   }
 }
 
-#Section__Exchange {
-  width: 90%;
-  padding: 24px 36px;
+footer {
+  margin-top: 32px;
+  background-color: #0f0f0f;
+  padding: 16px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -719,86 +719,35 @@ nav ul li:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-#Section__Exchange .Exchanges__Supported {
-  background-color: #2A2A2A;
-  margin-top: 16px;
-  padding: 16px;
-  border-radius: 8px;
-}
-
-#Section__Exchange .Drop__Supported {
-  height: 80px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  cursor: pointer;
+  border-top: 2px solid #FFFFFF;
 }
 
-.Exchanges__Supported__Group {
+footer .social-media {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+footer .attribution {
+  text-align: center;
   margin-top: 24px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
-  grid-gap: 16px;
+  margin-bottom: 16px;
 }
 
-.Exchanges__Supported__Group .Chip__Container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 60px;
+footer .copyright {
+  text-align: center;
+  margin-top: 24px;
 }
 
-.Exchanges__Supported__Group .Supported__Chip {
-  padding: 16px 32px;
-  background-color: #0F0F0F;
-  border-radius: 8px;
-}
-
-@media screen and (max-width: 800px) {
-  #Section__Exchange {
-    width: 100%;
-    padding: 24px 12px;
-  }
-  #Section__Exchange .Exchanges__Supported {
-    padding: 8px;
-  }
-  #Section__Exchange .Drop__Supported {
-    height: 50px;
-  }
-  #Section__Exchange .Drop__Supported h2 {
-    font-size: 1.2rem;
-  }
-  .Exchanges__Supported__Group {
-    margin-top: 24px;
-    display: block;
-  }
-  .Exchanges__Supported__Group .Chip__Container {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
-  .Exchanges__Supported__Group .Chip__Container:not(:last-child) {
-    margin-bottom: 16px;
-  }
-  .Exchanges__Supported__Group .Supported__Chip {
-    padding: 16px 24px;
-    background-color: #0F0F0F;
-    border-radius: 8px;
+@media screen and (max-width: 600px) {
+  footer .social-media {
+    width: 60%;
   }
 }
 /*# sourceMappingURL=index.css.map */

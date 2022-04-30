@@ -1,0 +1,21 @@
+{
+  "short_name": "Crypto Alpha",
+  "name": "Crypto Alpha - Get the latest updates about cryptocurrencies",
+  "description": "Crypto Alpha is a Real-time cryptocurrency tracker, It's based on a powerful API. This app is a part of the Crypto Apps that are created by Abdo Achhoubi for educational purposes.",
+  "background_color": "#0A0A0A",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#0A0A0A"
+}

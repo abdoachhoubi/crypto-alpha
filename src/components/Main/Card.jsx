@@ -52,13 +52,15 @@ const Card = ({ data }) => {
       <div className="Coin__Card">
         <div className="Coin__Card__Info">
           <div className="CCI__Header">
-            <div className="CCI__Icon">
-              <img src={data.icon} alt={data.symbol} />
-            </div>
+            <div className="Title">
+              <div className="CCI__Icon">
+                <img src={data.icon} alt={data.symbol} />
+              </div>
 
-            <h3>
-              {data.name} ({data.symbol})
-            </h3>
+              <h3>
+                {data.name} ({data.symbol})
+              </h3>
+            </div>
           </div>
           <div className="CCI__Body">
             <p>
